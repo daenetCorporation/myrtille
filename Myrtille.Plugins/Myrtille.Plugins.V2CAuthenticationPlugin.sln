@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Myrtille.Plugins.V2CAuthenticationPlugin", "Myrtille.Plugins.V2CAuthenticationProvider\Myrtille.Plugins.V2CAuthenticationPlugin.csproj", "{F6BE5CE5-BF4E-48B2-A7A9-C46D77F85E24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Myrtille.Common", "..\Myrtille.Common\Myrtille.Common.csproj", "{37630774-1321-4E6A-8661-4430A8946E9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Myrtille.Plugins.V2CAuthenticationPlugin.Tests", "Myrtille.Plugins.V2CAuthenticationPlugin.Tests\Myrtille.Plugins.V2CAuthenticationPlugin.Tests.csproj", "{595C8E70-5907-4EA5-8A4C-DB53D15F6DC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6BE5CE5-BF4E-48B2-A7A9-C46D77F85E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6BE5CE5-BF4E-48B2-A7A9-C46D77F85E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6BE5CE5-BF4E-48B2-A7A9-C46D77F85E24}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F6BE5CE5-BF4E-48B2-A7A9-C46D77F85E24}.Debug|x86.Build.0 = Debug|Any CPU
+		{F6BE5CE5-BF4E-48B2-A7A9-C46D77F85E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6BE5CE5-BF4E-48B2-A7A9-C46D77F85E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6BE5CE5-BF4E-48B2-A7A9-C46D77F85E24}.Release|x86.ActiveCfg = Release|Any CPU
+		{F6BE5CE5-BF4E-48B2-A7A9-C46D77F85E24}.Release|x86.Build.0 = Release|Any CPU
+		{37630774-1321-4E6A-8661-4430A8946E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37630774-1321-4E6A-8661-4430A8946E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37630774-1321-4E6A-8661-4430A8946E9E}.Debug|x86.ActiveCfg = Debug|x86
+		{37630774-1321-4E6A-8661-4430A8946E9E}.Debug|x86.Build.0 = Debug|x86
+		{37630774-1321-4E6A-8661-4430A8946E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37630774-1321-4E6A-8661-4430A8946E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37630774-1321-4E6A-8661-4430A8946E9E}.Release|x86.ActiveCfg = Release|x86
+		{37630774-1321-4E6A-8661-4430A8946E9E}.Release|x86.Build.0 = Release|x86
+		{595C8E70-5907-4EA5-8A4C-DB53D15F6DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595C8E70-5907-4EA5-8A4C-DB53D15F6DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595C8E70-5907-4EA5-8A4C-DB53D15F6DC1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{595C8E70-5907-4EA5-8A4C-DB53D15F6DC1}.Debug|x86.Build.0 = Debug|Any CPU
+		{595C8E70-5907-4EA5-8A4C-DB53D15F6DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595C8E70-5907-4EA5-8A4C-DB53D15F6DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595C8E70-5907-4EA5-8A4C-DB53D15F6DC1}.Release|x86.ActiveCfg = Release|Any CPU
+		{595C8E70-5907-4EA5-8A4C-DB53D15F6DC1}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F9309D0-0E66-4418-9710-C3CA28ADEA72}
+	EndGlobalSection
+EndGlobal

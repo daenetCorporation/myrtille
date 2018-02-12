@@ -25,6 +25,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -93,6 +94,7 @@
     <Compile Include="SocketHandler.ashx.cs">
       <DependentUpon>SocketHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="src\PluginManager.cs" />
     <Compile Include="src\RemoteSession.cs" />
     <Compile Include="src\RemoteSessionCommand.cs" />
     <Compile Include="src\RemoteSessionImage.cs" />

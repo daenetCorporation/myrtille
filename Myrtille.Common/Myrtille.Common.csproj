@@ -108,6 +108,7 @@
     <Compile Include="Helpers\RDPCryptoHelper.cs" />
     <Compile Include="Helpers\WindowHelper.cs" />
     <Compile Include="Helpers\XmlTools.cs" />
+    <Compile Include="Interfaces\IAuthenticationPlugin.cs" />
     <Compile Include="Log\Log4netTraceFilter.cs" />
     <Compile Include="Log\Log4netTraceListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

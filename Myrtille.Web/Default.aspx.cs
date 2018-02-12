@@ -24,6 +24,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.SessionState;
 using System.Web.UI;
+using Myrtille.Common.Interfaces;
 using Myrtille.Helpers;
 
 namespace Myrtille.Web
@@ -208,6 +209,17 @@ namespace Myrtille.Web
                     ClientHeight = int.Parse(height.Value),
                     Program = program.Value
                 };
+
+                // check if any of loaded AuthenticationPlugins can process the request
+                foreach (var plugin in PluginManager.GetPlugins<IAuthenticationPlugin>())
+                {
+                    if (plugin.CanProcess(Request.Params.ToString()))
+                    {
+                        RemoteSession.UserDomain = plugin.Domain;
+                        RemoteSession.UserName = plugin.UserName;
+                        RemoteSession.UserPassword = plugin.Password;
+                    }
+                }
 
                 // set the remote session for the current http session
                 HttpContext.Current.Session[HttpSessionStateVariables.RemoteSession.ToString()] = RemoteSession;

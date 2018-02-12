@@ -22,6 +22,7 @@ using System.Diagnostics;
 using System.Web;
 using System.Web.SessionState;
 using log4net.Config;
+using Myrtille.Common.Interfaces;
 
 namespace Myrtille.Web
 {
@@ -56,6 +57,9 @@ namespace Myrtille.Web
 
                 // http sessions
                 Application[HttpApplicationStateVariables.HttpSessions.ToString()] = new Dictionary<string, HttpSessionState>();
+
+                // loads plugins that implement IAuthenticationPlugin interface
+                PluginManager.LoadPlugins<IAuthenticationPlugin>();
             }
             catch (Exception exc)
             {
