@@ -27,9 +27,9 @@ namespace Myrtille.Web
             //
             // Gets the dll assemblies from the plugin directory
             string[] dllFileNames = null;
-            if (Directory.Exists(AppDomain.CurrentDomain.RelativeSearchPath + "\\" + PLUGIN_DIR))
+            if (Directory.Exists(Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, PLUGIN_DIR)))
             {
-                dllFileNames = Directory.GetFiles(AppDomain.CurrentDomain.RelativeSearchPath + "\\" + PLUGIN_DIR, "*.dll");
+                dllFileNames = Directory.GetFiles(Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, PLUGIN_DIR), "*.dll");
             }
             else
             {

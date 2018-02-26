@@ -18,9 +18,12 @@ namespace Myrtille.Plugins.V2CAuthenticationPlugin.Tests
         {
             // Change to your test token value
             var token = "98337affc7ad4937be429cdc966fc719";
-            var requestString = $"__EVENTTARGET=&__EVENTARGUMENT=&v2cPassword={token}&connect=Connect%21";
+            var requestString = $"__EVENTTARGET=&__EVENTARGUMENT=&oneTimePassword={token}&connect=Connect%21";
 
             Assert.IsTrue(v2CAuthenticationPlugin.CanProcess(requestString));
+
+            Assert.IsNotNull(v2CAuthenticationPlugin.UserName);
+            Assert.IsNotNull(v2CAuthenticationPlugin.Password);
         }
     }
 }
