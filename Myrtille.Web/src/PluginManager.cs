@@ -19,13 +19,13 @@ namespace Myrtille.Web
         private static ICollection<object> Plugins = new List<object>();
 
         /// <summary>
-        /// Loads and creates the instance of plugin assembiles from the directory with given type.
+        /// Loads and creates the instance of plugin assemblies from the directory with given type.
         /// </summary>
         /// <typeparam name="T">Type of plugins we want to be loaded</typeparam>
         public static void LoadPlugins<T>()
         {
             //
-            // Gets the dll assembiles from the plugin directory
+            // Gets the dll assemblies from the plugin directory
             string[] dllFileNames = null;
             if (Directory.Exists(AppDomain.CurrentDomain.RelativeSearchPath + "\\" + PLUGIN_DIR))
             {
@@ -38,7 +38,7 @@ namespace Myrtille.Web
             }
 
             //
-            // Loads the assembiles
+            // Loads the assemblies
             ICollection<Assembly> assemblies = new List<Assembly>(dllFileNames.Length);
             foreach (string dllFile in dllFileNames)
             {
@@ -82,8 +82,8 @@ namespace Myrtille.Web
         /// <summary>
         /// Returns the plugins that are loaded and activated.
         /// </summary>
-        /// <typeparam name="T">Type of plugins we want to retrive</typeparam>
-        /// <returns>ICollection of loaded and activated plugin assembiles</returns>
+        /// <typeparam name="T">Type of plugins we want to retrieve</typeparam>
+        /// <returns>ICollection of loaded and activated plugin assemblies</returns>
         public static IList<T> GetPlugins<T>()
         {
             return Plugins.OfType<T>().ToList();
