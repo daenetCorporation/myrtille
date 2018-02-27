@@ -33,6 +33,8 @@ namespace Myrtille.Web
     {
         protected RemoteSession RemoteSession;
 
+        protected bool FileTransferDisabled = Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["FileTransferDisabled"]);
+
         /// <summary>
         /// initialization
         /// </summary>
@@ -152,7 +154,7 @@ namespace Myrtille.Web
                 scale.Disabled = loginScreen.Visible;
                 keyboard.Disabled = loginScreen.Visible;
                 clipboard.Disabled = loginScreen.Visible;
-                files.Disabled = loginScreen.Visible || (RemoteSession.ServerAddress.ToLower() != "localhost" && RemoteSession.ServerAddress != "127.0.0.1" && RemoteSession.ServerAddress != HttpContext.Current.Request.Url.Host && string.IsNullOrEmpty(RemoteSession.UserDomain)) || string.IsNullOrEmpty(RemoteSession.UserName) || string.IsNullOrEmpty(RemoteSession.UserPassword);
+                files.Disabled = loginScreen.Visible || FileTransferDisabled || (RemoteSession.ServerAddress.ToLower() != "localhost" && RemoteSession.ServerAddress != "127.0.0.1" && RemoteSession.ServerAddress != HttpContext.Current.Request.Url.Host && string.IsNullOrEmpty(RemoteSession.UserDomain)) || string.IsNullOrEmpty(RemoteSession.UserName) || string.IsNullOrEmpty(RemoteSession.UserPassword);
                 cad.Disabled = loginScreen.Visible;
                 mrc.Disabled = loginScreen.Visible;
                 disconnect.Disabled = loginScreen.Visible;
